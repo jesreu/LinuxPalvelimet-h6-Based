@@ -27,7 +27,7 @@ Nyt voimme ajaa komennot, joilla otamme käyttöön luomamme conf tiedoston, kyt
 ![jokuvika](https://user-images.githubusercontent.com/112503770/216899307-c5a30576-6a8d-4de6-a4e4-a173b5d0bb4a.png)
 
     
-Ajettuani kommenot huomasin että apache ei suostunut käynnistymään, joten aloitin vian haku prosessin ajamalla komennon `sudo tail -1 var/log/apache2/error.log`, mutta se ei antanut juurikaan järkevää tulosta. Ajamalla apachen ehdottaman komennon:
+Ajettuani kommenot huomasin että apache ei suostunut käynnistymään, joten aloitin vianhakuprosessin ajamalla komennon `sudo tail -1 var/log/apache2/error.log`, mutta se ei antanut juurikaan järkevää tulosta. Ajamalla apachen ehdottaman komennon:
     
     sudo systemctl status apache2
     
