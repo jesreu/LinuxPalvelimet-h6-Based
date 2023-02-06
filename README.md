@@ -13,7 +13,9 @@ Muuttaaksemme apachen etusivua, tulee meidän luoda uusi conf tiedosto sivua var
 
     sudoedit /etc/apache2/sites-available/frontpage.conf
     
-Kuve
+![confsivu](https://user-images.githubusercontent.com/112503770/216899160-9ae6c132-429c-4370-ad86-2075fd1b17ef.png)
+
+
 
 Nyt voimme ajaa komennot, joilla otamme käyttöön luomamme conf tiedoston, kytkemme vanhan default conf tiedoston pois päältä ja käynnistämme apachen uudelleen.
 
@@ -21,13 +23,19 @@ Nyt voimme ajaa komennot, joilla otamme käyttöön luomamme conf tiedoston, kyt
     sudo a2dissite 000-default.conf
     sudo systemctl restart apache2
     
+
+![jokuvika](https://user-images.githubusercontent.com/112503770/216899307-c5a30576-6a8d-4de6-a4e4-a173b5d0bb4a.png)
+
+    
 Ajettuani kommenot huomasin että apache ei suostunut käynnistymään, joten aloitin vian haku prosessin ajamalla komennon `sudo tail -1 var/log/apache2/error.log`, mutta se ei antanut juurikaan järkevää tulosta. Ajamalla apachen ehdottaman komennon:
     
     sudo systemctl status apache2
     
-Kuve kuve
-    
-Sain status ruutua navigoimalla tiedon, että olin kirjoittanut conf tiedostoni hieman väärin, joten korjaan tiedostossa ilmenneen virheen komennoilla:
+![vika_raportti](https://user-images.githubusercontent.com/112503770/216899348-b64c082d-0265-43e5-8a16-52a4f2651af3.png)
+ 
+ ![vian_syy](https://user-images.githubusercontent.com/112503770/216899372-42151216-359a-455d-b12b-4166e58f8316.png)
+  
+Sain status ruutua navigoimalla tiedon, että olin kirjoittanut conf tiedostoni hieman väärin, joten korjaan tiedostossa väärin kirjoitetun virtualhost lopputagin komennoilla:
 
     sudoedit /etc/apache2/sites-available/frontpage.conf
     sudo systemctl restart apache2
@@ -38,11 +46,14 @@ Luomamme conf on nyt käytössä, joten voimme luoda sitä vastaavan nettisivun 
     mkdir sites
     micro index.html
     
+![apach1](https://user-images.githubusercontent.com/112503770/216899623-7a5d49bf-8dc4-4c70-909a-8fd8feb3a2e1.png)
+ 
 Testataan että sivu toimii:
 
     curl "http://localhost"
 
-kuve
+![kaikki_ok](https://user-images.githubusercontent.com/112503770/216899555-93698978-80ed-4a16-baae-6277352e4ceb.png)
+
 
 ## Lähteet
 
