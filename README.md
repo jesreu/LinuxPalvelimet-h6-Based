@@ -5,12 +5,12 @@
 
 ## x) 
 ### Getting started - Apache2
--URL: uniform resource locator vastaa siitä, mikä palvelimella oleva resurssi näytetään selaimen käyttäjälle
--Virtual hostien avulla voidaan pyörittää useampaa kuin yhtä sivua serverillä.
--DocumentRoot kertoo missä hakemistossa sijaitsee sivuston resurssit
+    -URL: uniform resource locator vastaa siitä, mikä palvelimella oleva resurssi näytetään selaimen käyttäjälle
+    -Virtual hostien avulla voidaan pyörittää useampaa kuin yhtä sivua serverillä.
+    -DocumentRoot kertoo missä hakemistossa sijaitsee sivuston resurssit
 ### Name-based Virtual Host Support
--Virtual hostien avulla yhdellä ip:llä voi olla useampi host.
--ServerName kannaattaa aina määritellä, koska muuten sivu perii serverin nimen perus serveri configuraatiosta
+    -Virtual hostien avulla yhdellä ip:llä voi olla useampi host.
+    -ServerName kannaattaa aina määritellä, koska muuten sivu perii serverin nimen perus serveri configuraatiosta
 ## a) + b) 
 Muuttaaksemme apachen etusivua, tulee meidän luoda uusi conf tiedosto sivua varten.
 
