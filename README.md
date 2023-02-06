@@ -4,15 +4,31 @@
     Linkki:       https://terokarvinen.com/2023/linux-palvelimet-2023-alkukevat/
 
 ## x) 
+### Getting started - Apache2
 
-## a) 
+### Name-based Virtual Host Support
 
-## b) 
+## a) + b) 
+
+    sudoedit /etc/apache2/sites-available/frontpage.conf
+    sudo a2aensite frontpage.conf
+    sudo a2dissite 000-default.conf
+    sudo systemctl restart apache2
+    
+    sudo tail -1 var/log/apache2/error.log
+    sudo systemctl status apache2
+    
+    sudoedit /etc/apache2/sites-available/frontpage.conf
+    sudo systemctl restart apache2
+    
+    cd
+    mkdir sites
+    micro index.html
+    curl "http://localhost"
 
 ## Lähteet
 
     https://terokarvinen.com/2023/linux-palvelimet-2023-alkukevat/
-    https://www.indiehackers.com/podcast/196-david-perell
-    https://www.sitepoint.com/a-minimal-html-document-html5-edition/
-    https://askubuntu.com/questions/393321/unable-to-delete-user
-    https://validator.w3.org
+    https://httpd.apache.org/docs/2.4/getting-started.html
+    https://httpd.apache.org/docs/current/vhosts/name-based.html
+    
